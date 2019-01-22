@@ -168,7 +168,7 @@ SectionDevice."Line" {
     PlaybackPCM "hw:0,0"
     PlaybackPriority 115
     PlaybackVolume "LINEOUT2 Volume"
-    JackControl "Dock Jack"
+    JackControl "LINE Jack"
   }
 }
 
