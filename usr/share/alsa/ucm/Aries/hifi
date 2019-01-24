@@ -57,6 +57,7 @@ SectionDevice."Headphones" {
   ]
 
   Value {
+    PlaybackChannels 2
     PlaybackPCM "hw:0,0"
     PlaybackPriority 110
     PlaybackVolume "Headphone Volume"
@@ -92,6 +93,7 @@ SectionDevice."Speaker" {
   ]
 
   Value {
+    PlaybackChannels 1
     PlaybackPCM "hw:0,0"
     PlaybackPriority 105
     PlaybackVolume "Speaker Volume"
@@ -129,6 +131,7 @@ SectionDevice."Earpiece" {
   ]
 
   Value {
+    PlaybackChannels 1
     PlaybackPCM "hw:0,0"
     PlaybackPriority 100
     PlaybackVolume "Earpiece Volume"
@@ -165,6 +168,7 @@ SectionDevice."Line" {
   ]
 
   Value {
+    PlaybackChannels 2
     PlaybackPCM "hw:0,0"
     PlaybackPriority 90
     PlaybackVolume "LINEOUT2 Volume"
@@ -205,8 +209,10 @@ SectionDevice."Bluetooth" {
   ]
 
   Value {
+    PlaybackChannels 2
     PlaybackPCM "hw:0,0"
     PlaybackPriority 95
+    CaptureChannels 2
     CapturePCM "hw:0,0"
     CapturePriority 95
   }
@@ -240,6 +246,7 @@ SectionDevice."MainMic" {
   ]
 
   Value {
+    CaptureChannels 1
     CapturePCM "hw:0,0"
     CapturePriority 100
     CaptureVolume "IN1L Volume"
@@ -276,6 +283,7 @@ SectionDevice."HeadsetMic" {
   ]
 
   Value {
+    CaptureChannels 1
     CapturePCM "hw:0,0"
     CapturePriority 105
     CaptureVolume "IN1R Volume"

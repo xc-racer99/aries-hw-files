@@ -43,6 +43,7 @@ SectionDevice."Headphones" {
   ]
 
   Value {
+    PlaybackChannels 2
     PlaybackPriority 105
     PlaybackVolume "Headphone Volume"
     JackControl "HP Jack"
@@ -95,6 +96,7 @@ SectionDevice."Speaker" {
   ]
 
   Value {
+    PlaybackChannels 2
     PlaybackPriority 100
     PlaybackVolume "Speaker Volume"
   }
