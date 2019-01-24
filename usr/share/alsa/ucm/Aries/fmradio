@@ -100,7 +100,7 @@ SectionDevice."Speaker" {
   }
 }
 
-SectionDevice."Capture Music" {
+SectionModifier."Capture Music" {
   Comment "recording FM Radio"
 
   EnableSequence [
