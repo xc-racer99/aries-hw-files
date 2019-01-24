@@ -34,31 +34,28 @@ SectionDevice."Earpiece" {
 
   EnableSequence [
 # Path
-    cset "name='Left Output Mixer DAC Switch' on"
     cset "name='Right Output Mixer DAC Switch' on"
-    cset "name='Earpiece Mixer Left Output Switch' on"
+    cset "name='Left Output Mixer DAC Switch' on"
+
     cset "name='Earpiece Mixer Right Output Switch' on"
-    cset "name='Output Switch' on"
-    cset "name='Right Headphone Mux' Mixer"
-    cset "name='Left Headphone Mux' Mixer"
+    cset "name='Earpiece Mixer Left Output Switch' on"
     cset "name='Earpiece Switch' on"
     cset "name='RCV Switch' on"
   ]
 
   DisableSequence [
 # Path
-    cset "name='Left Output Mixer DAC Switch' off"
     cset "name='Right Output Mixer DAC Switch' off"
-    cset "name='Earpiece Mixer Left Output Switch' off"
+    cset "name='Left Output Mixer DAC Switch' off"
+
     cset "name='Earpiece Mixer Right Output Switch' off"
-    cset "name='Output Switch' off"
-    cset "name='Right Headphone Mux' DAC"
-    cset "name='Left Headphone Mux' DAC"
+    cset "name='Earpiece Mixer Left Output Switch' off"
     cset "name='Earpiece Switch' off"
+    cset "name='RCV Switch' off"
   ]
 
   Value {
-    PlaybackChannels 1
+    PlaybackChannels 2
     PlaybackPCM "hw:0,0"
     PlaybackPriority 110
     PlaybackVolume "Earpiece Volume"
@@ -70,17 +67,12 @@ SectionDevice."Headphones" {
 
   EnableSequence [
 # Path
-    cset "name='Right Headphone Mux' DAC"
-    cset "name='Left Headphone Mux' DAC"
-    cset "name='Right Output Mixer DAC Switch' on"
-    cset "name='Left Output Mixer DAC Switch' on"
     cset "name='Headphone Switch' on"
     cset "name='HP Switch' on"
   ]
 
   DisableSequence [
-    cset "name='Right Output Mixer DAC Switch' off"
-    cset "name='Left Output Mixer DAC Switch' off"
+# Path
     cset "name='Headphone Switch' off"
     cset "name='HP Switch' off"
   ]
@@ -98,30 +90,23 @@ SectionDevice."Speaker" {
   Comment "Fascinate4G built-in Speaker"
 
   EnableSequence [
-# Gain
-    cset "name='Speaker Mixer Volume' 3,3"
-    cset "name='Speaker Boost Volume' 7,7"
 # Path
-    cset "name='SPKL DAC1 Switch' on"
     cset "name='SPKR DAC1 Switch' on"
-    cset "name='SPKL Boost SPKL Switch' on"
-    cset "name='SPKR Boost SPKR Switch' on"
+    cset "name='SPKL DAC1 Switch' on"
     cset "name='Speaker Switch' on"
     cset "name='SPK Switch' on"
   ]
 
   DisableSequence [
 # Path
-    cset "name='SPKL DAC1 Switch' off"
     cset "name='SPKR DAC1 Switch' off"
-    cset "name='SPKL Boost SPKL Switch' off"
-    cset "name='SPKR Boost SPKR Switch' off"
+    cset "name='SPKL DAC1 Switch' off"
     cset "name='Speaker Switch' off"
     cset "name='SPK Switch' off"
   ]
 
   Value {
-    PlaybackChannels 1
+    PlaybackChannels 2
     PlaybackPCM "hw:0,0"
     PlaybackPriority 105
     PlaybackVolume "Speaker Volume"
@@ -191,7 +176,7 @@ SectionDevice."MainMic" {
   ]
 
   Value {
-    CaptureChannels 1
+    CaptureChannels 2
     CapturePCM "hw:0,0"
     CapturePriority 105
     CaptureVolume "IN1L Volume"
@@ -228,7 +213,7 @@ SectionDevice."HeadsetMic" {
   ]
 
   Value {
-    CaptureChannels 1
+    CaptureChannels 2
     CapturePCM "hw:0,0"
     CapturePriority 110
     CaptureVolume "IN1R Volume"
