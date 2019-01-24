@@ -33,8 +33,6 @@ SectionDevice."Earpiece" {
   Comment "Aries built-in Earpiece, Receiver"
 
   EnableSequence [
-# Gain
-    cset "name='Output Volume' 61,61"
 # Path
     cset "name='Left Output Mixer DAC Switch' on"
     cset "name='Right Output Mixer DAC Switch' on"
@@ -71,8 +69,6 @@ SectionDevice."Headphones" {
   Comment "Aries 3.5mm Headphones"
 
   EnableSequence [
-# Gain
-    cset "name='Headphone Volume' 47,47"
 # Path
     cset "name='Right Headphone Mux' DAC"
     cset "name='Left Headphone Mux' DAC"
@@ -104,7 +100,6 @@ SectionDevice."Speaker" {
   EnableSequence [
 # Gain
     cset "name='Speaker Mixer Volume' 3,3"
-    cset "name='Speaker Volume' 62,62"
     cset "name='Speaker Boost Volume' 7,7"
 # Path
     cset "name='SPKL DAC1 Switch' on"
@@ -171,7 +166,6 @@ SectionDevice."MainMic" {
 
   EnableSequence [
 # Gain
-    cset "name='IN1L Volume' 4"
     cset "name='MIXINL IN1L Volume' 1"
     cset "name='DAC2 Left Sidetone Volume' 12"
 # Path
@@ -209,7 +203,6 @@ SectionDevice."HeadsetMic" {
 
   EnableSequence [
 # Gain
-    cset "name='IN1R Volume' 4"
     cset "name='MIXINR IN1R Volume' 1"
     cset "name='DAC2 Right Sidetone Volume' 12"
 # Path

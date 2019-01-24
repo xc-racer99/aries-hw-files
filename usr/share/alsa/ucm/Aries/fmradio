@@ -18,8 +18,6 @@ SectionDevice."Headphones" {
   Comment "3.5mm Headphones"
 
   EnableSequence [
-# Gain
-    cset "name='Headphone Volume' 63,63"
 # Path
     cset "name='Right Output Mixer IN2RP Switch' on"
     cset "name='Left Output Mixer IN2RN Switch' on"

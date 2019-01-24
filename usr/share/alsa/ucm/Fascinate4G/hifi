@@ -39,7 +39,6 @@ SectionDevice."Headphones" {
 # Gain
     cset "name='Left Output Mixer DAC Volume' 7"
     cset "name='Right Output Mixer DAC Volume' 7"
-    cset "name='Headphone Volume' 50,50"
 # Path
     cset "name='Right Headphone Mux' DAC"
     cset "name='Left Headphone Mux' DAC"
@@ -71,7 +70,6 @@ SectionDevice."Speaker" {
   EnableSequence [
 # Gain
     cset "name='Speaker Mixer Volume' 3,3"
-    cset "name='Speaker Volume' 57,57"
     cset "name='Speaker Boost Volume' 4,4"
 # Path
     cset "name='SPKL DAC1 Switch' on"
@@ -104,8 +102,6 @@ SectionDevice."Earpiece" {
   Comment "built-in earpiece, receiver"
 
   EnableSequence [
-# Gain
-    cset "name='Output Volume' 61,61"
 # Path
     cset "name='Left Output Mixer DAC Switch' on"
     cset "name='Right Output Mixer DAC Switch' on"
@@ -142,8 +138,6 @@ SectionDevice."Line" {
   Comment "lineout for dock"
 
   EnableSequence [
-# Gain
-    cset "name='LINEOUT2 Volume' 0"
 # Path
     cset "name='Right Output Mixer DAC Switch' on"
     cset "name='Left Output Mixer DAC Switch' on"
@@ -223,7 +217,6 @@ SectionDevice."MainMic" {
 
   EnableSequence [
 # Gain
-    cset "name='IN1L Volume' 29"
     cset "name='MIXINL IN1L Volume' 1"
 # Path
     cset "name='Main Mic Switch' on"
@@ -258,7 +251,6 @@ SectionDevice."HeadsetMic" {
 
   EnableSequence [
 # Gain
-    cset "name='IN1R Volume' 11"
     cset "name='MIXINR IN1R Volume' 1"
 # Path
     cset "name='Headset Mic Switch' on"
