@@ -243,7 +243,7 @@ SectionDevice."HeadsetMic" {
   }
 }
 
-SectionDevice."Recording" {
+SectionModifier."Capture Voice" {
   Comment "recording Voice call"
 
   EnableSequence [
