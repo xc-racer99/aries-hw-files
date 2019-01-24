@@ -23,8 +23,8 @@ SectionDevice."Headphones" {
 # Path
     cset "name='Right Output Mixer IN2RP Switch' on"
     cset "name='Left Output Mixer IN2RN Switch' on"
-    cset "name='Right Headphone Mux' 0"
-    cset "name='Left Headphone Mux' 0"
+    cset "name='Right Headphone Mux' DAC"
+    cset "name='Left Headphone Mux' DAC"
     cset "name='Left Output Mixer DAC Switch' on"
     cset "name='Right Output Mixer DAC Switch' on"
     cset "name='Headphone Switch' on"
@@ -65,7 +65,7 @@ SectionDevice."Speaker" {
     cset "name='IN2R PGA IN2RP Switch' on"
     cset "name='IN2R Switch' on"
     cset "name='MIXINR IN2R Switch' on"
-    cset "name='ADCR Mux' 0"
+    cset "name='ADCR Mux' ADC"
     cset "name='DAC1R Mixer Right Sidetone Switch' on"
     cset "name='DAC1L Mixer Right Sidetone Switch' on"
     cset "name='DAC1 Switch' on"
@@ -113,18 +113,18 @@ SectionDevice."Capture Music" {
 # Path
     cset "name='IN2R Switch' on"
     cset "name='MIXINR IN2R Switch' on"
-    cset "name='ADCR Mux' 0"
+    cset "name='ADCR Mux' ADC"
     cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' on"
-    cset "name='AIF1ADCR Source' 1"
-    cset "name='AIF1ADCL Source' 1"
+    cset "name='AIF1ADCR Source' Right"
+    cset "name='AIF1ADCL Source' Right"
   ]
 
   DisableSequence [
     cset "name='IN2R Switch' off"
     cset "name='MIXINR IN2R Switch' off"
     cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' off"
-    cset "name='AIF1ADCR Source' 0"
-    cset "name='AIF1ADCL Source' 0"
+    cset "name='AIF1ADCR Source' Left"
+    cset "name='AIF1ADCL Source' Left"
   ]
 
   Value {

@@ -41,8 +41,8 @@ SectionDevice."Earpiece" {
     cset "name='Earpiece Mixer Left Output Switch' on"
     cset "name='Earpiece Mixer Right Output Switch' on"
     cset "name='Output Switch' on"
-    cset "name='Right Headphone Mux' 1"
-    cset "name='Left Headphone Mux' 1"
+    cset "name='Right Headphone Mux' Mixer"
+    cset "name='Left Headphone Mux' Mixer"
     cset "name='Earpiece Switch' on"
     cset "name='RCV Switch' on"
   ]
@@ -54,8 +54,8 @@ SectionDevice."Earpiece" {
     cset "name='Earpiece Mixer Left Output Switch' off"
     cset "name='Earpiece Mixer Right Output Switch' off"
     cset "name='Output Switch' off"
-    cset "name='Right Headphone Mux' 0"
-    cset "name='Left Headphone Mux' 0"
+    cset "name='Right Headphone Mux' DAC"
+    cset "name='Left Headphone Mux' DAC"
     cset "name='Earpiece Switch' off"
   ]
 
@@ -74,8 +74,8 @@ SectionDevice."Headphones" {
 # Gain
     cset "name='Headphone Volume' 47,47"
 # Path
-    cset "name='Right Headphone Mux' 0"
-    cset "name='Left Headphone Mux' 0"
+    cset "name='Right Headphone Mux' DAC"
+    cset "name='Left Headphone Mux' DAC"
     cset "name='Right Output Mixer DAC Switch' on"
     cset "name='Left Output Mixer DAC Switch' on"
     cset "name='Headphone Switch' on"
@@ -142,18 +142,18 @@ SectionDevice."Bluetooth" {
     cset "name='DAC2 Volume' 96,96"
     cset "name='AIF2ADC Volume' 96,96"
 # Path
-    cset "name='AIF2DAC Mux' 0"
+    cset "name='AIF2DAC Mux' AIF2DACDAT"
     cset "name='AIF2DAC2L Mixer AIF2 Switch' on"
     cset "name='AIF2DAC2R Mixer AIF2 Switch' on"
-    cset "name='AIF3ADC Mux' 1"
-    cset "name='AIF2ADC Mux' 1"
+    cset "name='AIF3ADC Mux' AIF3DACDAT"
+    cset "name='AIF2ADC Mux' AIF3DACDAT"
   ]
 
   DisableSequence [
     cset "name='AIF2DAC2L Mixer AIF2 Switch' off"
     cset "name='AIF2DAC2R Mixer AIF2 Switch' off"
-    cset "name='AIF3ADC Mux' 0"
-    cset "name='AIF2ADC Mux' 0"
+    cset "name='AIF3ADC Mux' AIF2ADCDAT"
+    cset "name='AIF2ADC Mux' AIF3DACDAT"
   ]
 
   Value {
@@ -180,10 +180,10 @@ SectionDevice."MainMic" {
     cset "name='IN1L PGA IN1LP Switch' on"
     cset "name='IN1L Switch' on"
     cset "name='MIXINL IN1L Switch' on"
-    cset "name='ADCL Mux' 0"
+    cset "name='ADCR Mux' ADC"
     cset "name='AIF2DAC2L Mixer Left Sidetone Switch' on"
-    cset "name='AIF2ADCL Source' 0"
-    cset "name='AIF2ADC Mux' 0"
+    cset "name='AIF2ADCL Source' Left"
+    cset "name='AIF2ADC Mux' AIF3DACDAT"
   ]
 
   DisableSequence [
@@ -218,10 +218,10 @@ SectionDevice."HeadsetMic" {
     cset "name='IN1R PGA IN1RP Switch' on"
     cset "name='IN1R Switch' on"
     cset "name='MIXINR IN1R Switch' on"
-    cset "name='ADCR Mux' 0"
-    cset "name='AIF2ADCR Source' 1"
+    cset "name='ADCR Mux' ADC"
+    cset "name='AIF2ADCR Source' Right"
     cset "name='AIF2DAC2R Mixer Right Sidetone Switch' on"
-    cset "name='AIF2ADC Mux' 0"
+    cset "name='AIF2ADC Mux' AIF3DACDAT"
   ]
 
   DisableSequence [
@@ -230,7 +230,7 @@ SectionDevice."HeadsetMic" {
     cset "name='IN1R PGA IN1RP Switch' off"
     cset "name='IN1R Switch' off"
     cset "name='MIXINR IN1R Switch' off"
-    cset "name='AIF2ADCR Source' 0"
+    cset "name='AIF2ADCR Source' Left"
     cset "name='AIF2DAC2R Mixer Right Sidetone Switch' off"
   ]
 
@@ -251,7 +251,7 @@ SectionDevice."Capture Voice" {
     cset "name='AIF2DAC Volume' 96,96"
     csset "name='AIF1ADC1 Volume' 96,96"
 # Path
-    cset "name='AIF2DAC Mux' 0"
+    cset "name='AIF2DAC Mux' AIF2DACDAT"
     cset "name='AIF1ADC1L Mixer AIF2 Switch' on"
     cset "name='AIF1ADC1R Mixer AIF2 Switch' on"
   ]
