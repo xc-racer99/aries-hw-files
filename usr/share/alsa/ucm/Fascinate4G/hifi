@@ -50,6 +50,8 @@ SectionDevice."Speaker" {
     cset "name='Speaker Volume' 63"
     cset "name='Speaker Boost Volume' 6"
     cset "name='Speaker Mixer Volume' 3"
+    cset "name='SPKL Source' Both"
+    cset "name='SPKR DAC1 Switch' 1"
     cset "name='SPKL DAC1 Switch' 1"
 
     cset "name='SPK Switch' 1"
@@ -58,6 +60,8 @@ SectionDevice."Speaker" {
   DisableSequence [
     cset "name='Speaker Switch' 0"
     cset "name='SPKL DAC1 Switch' 0"
+    cset "name='SPKR DAC1 Switch' 0"
+    cset "name='SPKL Source' Left"
 
     cset "name='SPK Switch' 0"
   ]
