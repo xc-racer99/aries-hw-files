@@ -46,6 +46,7 @@ SectionDevice."Speaker" {
   Comment "built-in Speaker"
 
   EnableSequence [
+    cset "name='AIF1DAC1 Mono Switch' 1"
     cset "name='Speaker Switch' 1"
     cset "name='Speaker Volume' 63"
     cset "name='Speaker Boost Volume' 6"
@@ -56,6 +57,7 @@ SectionDevice."Speaker" {
   ]
 
   DisableSequence [
+    cset "name='AIF1DAC1 Mono Switch' 0"
     cset "name='Speaker Switch' 0"
     cset "name='SPKL DAC1 Switch' 0"
 
