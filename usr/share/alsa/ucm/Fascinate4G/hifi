@@ -51,7 +51,6 @@ SectionDevice."Speaker" {
     cset "name='Speaker Boost Volume' 6"
     cset "name='Speaker Mixer Volume' 3"
     cset "name='SPKL DAC1 Switch' 1"
-    cset "name='SPKR DAC1 Switch' 1"
 
     cset "name='SPK Switch' 1"
   ]
@@ -59,7 +58,6 @@ SectionDevice."Speaker" {
   DisableSequence [
     cset "name='Speaker Switch' 0"
     cset "name='SPKL DAC1 Switch' 0"
-    cset "name='SPKR DAC1 Switch' 0"
 
     cset "name='SPK Switch' 0"
   ]
@@ -149,7 +147,13 @@ SectionDevice."Line" {
 SectionDevice."MainMic" {
   Comment "built-in main mic"
 
+  ConflictingDevice [
+    "HeadsetMic"
+  ]
+
   EnableSequence [
+    cset "name='AIF1ADCL Source' Left"
+    cset "name='AIF1ADCR Source' Left"
     cset "name='AIF1ADC1L Mixer ADC/DMIC Switch' 1"
     cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' 1"
     cset "name='MIXINL IN1L Switch' 1"
@@ -164,6 +168,7 @@ SectionDevice."MainMic" {
   ]
 
   DisableSequence [
+    cset "name='AIF1ADCR Source' Right"
     cset "name='AIF1ADC1L Mixer ADC/DMIC Switch' 0"
     cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' 0"
     cset "name='MIXINL IN1L Switch' 0"
@@ -186,7 +191,13 @@ SectionDevice."MainMic" {
 SectionDevice."HeadsetMic" {
   Comment "external headset mic"
 
+  ConflictingDevice [
+    "MainMic"
+  ]
+
   EnableSequence [
+    cset "name='AIF1ADCL Source' Right"
+    cset "name='AIF1ADCR Source' Right"
     cset "name='AIF1ADC1L Mixer ADC/DMIC Switch' 1"
     cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' 1"
     cset "name='MIXINR IN1R Switch' 1"
@@ -201,6 +212,7 @@ SectionDevice."HeadsetMic" {
   ]
 
   DisableSequence [
+    cset "name='AIF1ADCL Source' Left"
     cset "name='AIF1ADC1L Mixer ADC/DMIC Switch' 0"
     cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' 0"
     cset "name='MIXINR IN1R Switch' 0"
