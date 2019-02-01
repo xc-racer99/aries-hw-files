@@ -8,6 +8,12 @@ SectionVerb {
     cset "name='DAC1 Switch' 1"
   ]
 
+  DisableSequence [
+    cset "name='DAC1L Mixer AIF1.1 Switch' 0"
+    cset "name='DAC1R Mixer AIF1.1 Switch' 0"
+    cset "name='DAC1 Switch' 0"
+  ]
+
   Value {
     TQ "Music"
     PlaybackCTL "hw:0"
